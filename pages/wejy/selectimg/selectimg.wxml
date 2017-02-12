@@ -1,0 +1,24 @@
+<view>
+    <button bindtap="clickSelect">选择照片</button>
+   
+
+
+<!--<scroll-view  class="container_wrap" scroll-y="true">
+    <view class="listview">
+      <view class="thumbnail" wx:for="{{imgs}}" wx:key="productlist" >
+      <text>{{item}}</text>
+          <image class="product_image " mode="aspectFit" src="{{item}}"></image>
+          
+      </view>
+    </view>
+  </scroll-view>-->
+    <scroll-view class="scro-view" scroll-y="true">
+        <view class="imgListview">
+            <view class="itemList" wx:for="{{imgs}}" >
+                    <image src="{{item.url}}" class="itemImg" mode="aspectFill" bindtap="ylPhoto" id="{{item.url}}"></image>
+            </view>
+        </view>
+        
+    </scroll-view>
+ <button class="bottom" bindtap="toPaiban">已选择{{countImg}}照片，确认提交</button>
+</view>

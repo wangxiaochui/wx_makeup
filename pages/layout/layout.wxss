@@ -1,0 +1,37 @@
+.img-view-column{
+    display: flex;
+    flex-direction: column;
+}
+.img-view-row{
+    display: flex;
+    flex-direction: row;
+}
+.img-column{
+    width:375rpx; 
+    height: 500rpx;
+    flex: 1;
+}
+.img-column-half{
+    width:375rpx; 
+    height: 250rpx;
+    flex: 1;
+    
+}
+.img-half-row{
+    width: 375rpx;
+    height: 250rpx;
+    flex: 1;
+}
+.img-row{
+    width: 750rpx;
+    height: 250rpx;
+    flex: 1;
+}
+.btn{
+    background: #00ff00;
+    width: 750rpx;
+    height: 35rpx;
+}
+.view-line-page{
+    height: 85rpx;
+}

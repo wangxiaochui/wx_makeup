@@ -1,0 +1,145 @@
+<!-- 模板开始 -->
+<template name="image-one"><!--单张图片 -->
+    <button bindtap="bindtap" id="one">暂无模板切换</button>
+    <view>
+        <button class="btn-change" 
+            id="a" bindtap="changeImg">change</button>
+        <image class="img" src="{{imgUrls.a}}"  mode="aspectFill"></image>
+    </view>
+</template>
+
+<template name="image-two-row">
+    <button bindtap="bindtap" id="two">两图模板切换</button>
+    <!--两张图片--竖 -->
+    <view wx:if="{{temptype == 0}}" class="img-view-row">
+            <image class="img-column" src="{{imgUrls.a}}"
+                  mode="aspectFill"></image>
+            <button class="btn-change-half-column" 
+                id="a" bindtap="changeImg">change</button>
+            <image class="img-column" src="{{imgUrls.b}}"
+                mode="aspectFill"></image>
+            <button class="btn-change-half-column"
+                id="b" bindtap="changeImg">change</button>
+    </view>
+    <!--两张图片--横 -->
+    <view wx:if="{{temptype == 1}}" class="img-view-column">
+            <button class="btn-change"
+                id="a" bindtap="changeImg">change</button>
+            <image class="img-row" src="{{imgUrls.a}}"
+              mode="aspectFill"></image>
+            <button class="btn-change"
+                id="b" bindtap="changeImg">change</button>
+            <image class="img-row" src="{{imgUrls.b}}"
+              mode="aspectFill"></image>
+    </view>
+</template>
+
+<template name="image-three">
+    <button bindtap="bindtap" id="three">三图模板切换</button>
+    <!--三张图片--一竖两横 -->
+    <view wx:if="{{temptype == 0}}"  class="img-view-row">
+            <image class="img-column" mode="aspectFill" 
+                src="{{imgUrls.a}}"></image>
+            <button class="btn-change-half-column"
+                id="a" bindtap="changeImg">change</button>
+        <view class="img-view-column">
+            <button class="btn-change-half-row-top"
+                id="b" bindtap="changeImg">change</button>
+            <image class="img-half-row" mode="aspectFill" 
+                src="{{imgUrls.b}}"></image>
+            <button class="btn-change-half-row"
+                id="c" bindtap="changeImg">change</button>
+            <image class="img-half-row" mode="aspectFill" 
+                src="{{imgUrls.c}}"></image>
+        </view>
+    </view>
+    <!--三张图片--一横两竖 -->
+    <view wx:if="{{temptype == 1}}"  class="img-view-column">
+            <button class="btn-change" 
+                id="a"   bindtap="changeImg">change</button>
+            <image class="img-row" mode="aspectFill" 
+                src="{{imgUrls.a}}"></image>
+        <view class="img-view-row">
+            <image class="img-column-half" mode="aspectFill" 
+                src="{{imgUrls.b}}"></image>
+            <button class="btn-change-half-column" 
+                id="b" bindtap="changeImg">change</button>
+            
+            <image class="img-column-half" mode="aspectFill" 
+                src="{{imgUrls.c}}"></image>
+                <button class="btn-change-half-column" 
+                    id="c" bindtap="changeImg">change</button>
+        </view>
+    </view>
+</template>
+<template name="image-four"><!--四张图片 -->
+    <button bindtap="bindtap" id="four">暂无模板切换</button>
+    <view class="img-view-column">
+        <view class="img-view-row">
+            <image class="img-column-half" mode="aspectFill" 
+                src="{{imgUrls.a}}"></image>
+            <button class="btn-change-half-column" 
+                id="a" bindtap="changeImg">change</button>
+            <image class="img-column-half" mode="aspectFill" 
+                src="{{imgUrls.b}}"></image>
+            <button class="btn-change-half-column" 
+                id="b" bindtap="changeImg">change</button>
+        </view>
+        <view class="img-view-row">
+            <image class="img-column-half" mode="aspectFill" 
+                src="{{imgUrls.c}}"></image>
+            <button class="btn-change-half-column" 
+                id="c" bindtap="changeImg">change</button>
+            <image class="img-column-half" mode="aspectFill" 
+                src="{{imgUrls.d}}"></image>
+            <button class="btn-change-half-column" 
+                id="d" bindtap="changeImg">change</button>
+        </view>
+    </view>
+</template>
+
+<!-- 模板结束 -->
+
+
+<view >
+    <button bindtap="clickSave">保存作品</button>
+    <text class="txt-title">第{{currentPage}}页</text>
+    <swiper class="view-page" bindchange="change">
+        <block wx:for="{{contents}}">
+           
+        <swiper-item class="view-item-page">
+         <view wx:if="{{item.countImg == 1}}">
+                <template is="image-one" data="{{...item}}"/>
+            </view>
+            <view wx:if="{{item.countImg == 2}}">
+                <template is="image-two-row" data="{{...item}}"/>
+            </view>
+            <view wx:if="{{item.countImg == 3}}">
+                <template is="image-three" data="{{...item}}"/>
+            </view>
+            <view wx:if="{{item.countImg == 4}}">
+                <template is="image-four" data="{{...item}}"/>
+            </view>
+            <view class="view-line-page"></view>
+        </swiper-item>
+        </block>
+    
+    </swiper>
+
+    <!--<block wx:for="{{contents}}">
+        <view wx:if="{{item.countImg == 1}}">
+            <template is="image-one" data="{{...item}}"/>
+        </view>
+        <view wx:if="{{item.countImg == 2}}">
+            <template is="image-two-row" data="{{...item}}"/>
+        </view>
+        <view wx:if="{{item.countImg == 3}}">
+            <template is="image-three" data="{{...item}}"/>
+        </view>
+        <view wx:if="{{item.countImg == 4}}">
+            <template is="image-four" data="{{...item}}"/>
+        </view>
+        <view class="view-line-page"></view>
+    </block>-->
+
+</view>

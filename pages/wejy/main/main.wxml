@@ -1,0 +1,7 @@
+<view>
+
+    <block wx:for="{{goodsList}}" wx:key="goods">
+        <image class="item-img" src="{{item.default_img_url}}" mode="aspectFill" bindtap="clickItem"></image>
+    </block>
+
+</view>

@@ -1,0 +1,20 @@
+<!--index.wxml-->
+<view >
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+  <button bindtap="goFaces">人脸识别</button>
+  <button bindtap="goVideo">视频播放</button>
+  <button bindtap="goLayout">模板布局</button>
+  <button bindtap="goMain">主页</button>
+  <button bindtap="goLearn">yxs学习</button>
+  <button bindtap="clear">清除所有文件</button>
+
+  <view class="testFlex">
+      <view class="testFlexItem1"></view>
+      <view class="testFlexItem2"></view>
+      <view class="item3"></view>
+  </view>
+  
+</view>

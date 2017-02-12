@@ -1,0 +1,129 @@
+.WViewColumn1{
+box-sizing:border-box;
+ display:flex;
+ justify-content:flex-start;
+ align-items:flex-start;
+ flex-direction:column; 
+ flex-wrap:nowrap; 
+ align-content:stretch; 
+ width:750rpx;
+ height: 1960rpx; 
+ background-color: transparent; 
+ color: #FFFFFF; 
+ font-size: 20PX; 
+ line-height:40rpx; 
+
+}
+.WScrollView1{
+box-sizing:border-box;
+ margin: 16rpx 0rpx 0rpx 0rpx; 
+ width:750rpx;
+ height: 400rpx; 
+ background-color: #FFFFFF; 
+ color: #FFFFFF; 
+ font-size: 20PX; 
+ line-height:0rpx; 
+
+}
+.WViewRow1{
+box-sizing:border-box;
+  display: flex; 
+justify-content:flex-start;
+align-items:flex-start;
+flex-direction:row;
+ flex-wrap:wrap;
+ align-content:stretch;
+padding: 30rpx; 
+ width:750rpx;
+ background-color: #FFFFFF; 
+ color: #FFFFFF; 
+ font-size: 20PX; 
+ line-height:40rpx; 
+
+}
+.WImage1{
+ width:680rpx;
+ height:340rpx; 
+}
+.WViewRow2{
+box-sizing:border-box;
+  display: flex; 
+justify-content:flex-start;
+align-items:flex-start;
+flex-direction:row;
+ flex-wrap:wrap;
+ align-content:stretch;
+padding: 30rpx; 
+ width:750rpx;
+ background-color: #FFFFFF; 
+ color: #FFFFFF; 
+ font-size: 20PX; 
+ line-height:40rpx; 
+
+}
+.WImage2{
+ width:260rpx;
+ height:340rpx; 
+}
+.WViewColumn2{
+box-sizing:border-box;
+ display:flex;
+justify-content:space-between;
+align-items:flex-start;
+flex-direction:column;
+ flex-wrap:nowrap;
+ align-content:stretch;
+margin: 0rpx 0rpx 0rpx 10rpx; 
+ width: 420rpx; 
+ height: 340rpx; 
+ background-color: #FFFFFF; 
+ color: #FFFFFF; 
+ font-size: 20PX; 
+ line-height: 340rpx; 
+
+}
+.WImage3{
+ width:420rpx;
+ height:260rpx; 
+}
+.WViewRow3{
+box-sizing:border-box;
+ display:flex;
+justify-content:center;
+align-items:flex-start;
+flex-direction:row;
+ flex-wrap:wrap;
+ align-content:stretch;
+ width: 420rpx; 
+ background-color: #FFFFFF; 
+ color: #FFFFFF; 
+ font-size: 20PX; 
+ line-height: 80rpx; 
+
+}
+.WText16PT1{
+ background-color: transparent; 
+ color: #000000;  font-size: 16PX; 
+ line-height: 32rpx; 
+
+}
+.WViewRow4{
+box-sizing:border-box;
+  display: flex; 
+justify-content:flex-start;
+align-items:flex-start;
+flex-direction:row;
+ flex-wrap:wrap;
+ align-content:stretch;
+padding: 30rpx; 
+ width:750rpx;
+ background-color: #FFFFFF; 
+ color: #FFFFFF; 
+ font-size: 20PX; 
+ line-height:40rpx; 
+
+}
+.WImage4{
+ width:680rpx;
+ height:340rpx; 
+}

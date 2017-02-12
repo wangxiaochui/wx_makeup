@@ -1,0 +1,18 @@
+<view>
+    <!--<button bindtap="toChooseImage">to choose image</button>
+    <button bindtap="uploadImage">{{uploadRes}}</button>
+     <button bindtap="faceshibie">test</button>-->
+
+     <image src="http://f.hiphotos.baidu.com/zhidao/wh%3D450%2C600/sign=6c3e5e3f6d061d957d133f3c4ec426e7/dcc451da81cb39db73c24051d3160924ab1830b2.jpg"></image>
+     <button bindtap="uploadImage">生成basebase64</button>
+     <button id="feature" bindtap="faceshibie">点击识别---人脸特征</button>
+     <button id="sex" bindtap="faceshibie">点击识别---性别</button>
+     <button id="age" bindtap="faceshibie">点击识别---年龄</button>
+     <text class="textview">识别结果：\n  {{shibieRes}}</text>
+    <block wx:for="{{imagePaths}}">
+        <!--<view class="imgshowparent">-->
+            <image class="imgshow" src="{{item}}"></image>
+        <!--</view>-->
+
+    </block>
+</view>

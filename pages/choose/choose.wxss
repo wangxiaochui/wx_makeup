@@ -1,0 +1,14 @@
+.imgshowparent{
+    width: 243rpx;
+     height: 243rpx;
+    display: table-cell;
+}
+.imgshow{
+     width: 240rpx;
+     margin-top: 10rpx;
+     margin-right: 10rpx;
+}
+.textview{
+    width: 100%;
+    height: 200rpx;
+}

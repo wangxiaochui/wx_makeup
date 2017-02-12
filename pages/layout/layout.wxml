@@ -1,0 +1,70 @@
+<!-- 模板开始 -->
+<template name="image-one"><!--单张图片 -->
+    <view>
+        <image src="{{imgUrls.a}}"></image>
+    </view>
+</template>
+
+<template name="image-two-row"><!--两张图片--横 -->
+    <button bindtap="bindtap" id="two">两图模板切换</button>
+    <view wx:if="{{temptype == 0}}" class="img-view-row">
+            <image class="img" src="{{imgUrls.a}}"></image>
+            <image class="img" src="{{imgUrls.b}}"></image>
+    </view>
+    <view wx:if="{{temptype == 1}}" class="img-view-column">
+            <image class="img" src="{{imgUrls.a}}"></image>
+            <image class="img" src="{{imgUrls.b}}"></image>
+    </view>
+</template>
+
+<template name="image-three"><!--三张图片--一竖两横 -->
+    <button bindtap="bindtap" id="three">三图模板切换</button>
+    <view wx:if="{{temptype == 0}}"  class="img-view-row">
+            <image class="img-column" mode="aspectFill" src="{{imgUrls.a}}"></image>
+        <view class="img-view-column">
+            <image class="img-half-row" mode="aspectFill" src="{{imgUrls.b}}"></image>
+            <image class="img-half-row" mode="aspectFill" src="{{imgUrls.c}}"></image>
+        </view>
+    </view>
+    <view wx:if="{{temptype == 1}}"  class="img-view-column">
+            <image class="img-row" mode="aspectFill" src="{{imgUrls.a}}"></image>
+        <view class="img-view-row">
+            <image class="img-column-half" mode="aspectFill" src="{{imgUrls.b}}"></image>
+            <image class="img-column-half" mode="aspectFill" src="{{imgUrls.c}}"></image>
+        </view>
+    </view>
+</template>
+<template name="image-four"><!--四张图片 -->
+    <view class="img-view-column">
+        <view class="img-view-row">
+            <image class="img-column-half" mode="aspectFill" src="{{imgUrls.a}}"></image>
+            <image class="img-column-half" mode="aspectFill" src="{{imgUrls.b}}"></image>
+        </view>
+        <view class="img-view-row">
+            <image class="img-column-half" mode="aspectFill" src="{{imgUrls.c}}"></image>
+            <image class="img-column-half" mode="aspectFill" src="{{imgUrls.d}}"></image>
+        </view>
+    </view>
+</template>
+
+<!-- 模板结束 -->
+
+
+<scroll-view>
+    <block wx:for="{{contents}}">
+        <view wx:if="{{item.countImg == 1}}">
+            <template is="image-one" data="{{...item}}"/>
+        </view>
+        <view wx:if="{{item.countImg == 2}}">
+            <template is="image-two-row" data="{{...item}}"/>
+        </view>
+        <view wx:if="{{item.countImg == 3}}">
+            <template is="image-three" data="{{...item}}"/>
+        </view>
+        <view wx:if="{{item.countImg == 4}}">
+            <template is="image-four" data="{{...item}}"/>
+        </view>
+        <view class="view-line-page"></view>
+    </block>
+
+</scroll-view>

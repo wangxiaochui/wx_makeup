@@ -1,0 +1,81 @@
+.view-page{
+    width: 750rpx;
+    height: 1000rpx;
+    margin-top: 150rpx;
+}
+.view-item-page{
+    width: 750rpx;
+    height: 1000rpx;
+}
+.img-view-column{
+    display: flex;
+    flex-direction: column;
+}
+.img-view-row{
+    display: flex;
+    flex-direction: row;
+}
+.img-column{
+    width:375rpx; 
+    height: 500rpx;
+    flex: 1;
+}
+.img-column-half{
+    width:375rpx; 
+    height: 250rpx;
+    flex: 1;
+    
+}
+.img-half-row{
+    width: 375rpx;
+    height: 250rpx;
+    flex: 1;
+}
+.img-row{
+    width: 750rpx;
+    height: 250rpx;
+    flex: 1;
+}
+.btn-change-half{
+    margin-left: 275rpx;
+    margin-bottom: -75rpx;
+}
+.btn-change-half-column{
+    width: 100rpx;
+    height: 100rpx;
+    margin-left: -100rpx;
+}
+.btn-change-half-row-top{
+    width: 100rpx;
+    height: 100rpx;
+    position: absolute;
+    margin-left: 275rpx;
+}
+.btn-change-half-row{
+    width: 100rpx;
+    height: 100rpx;
+    position: absolute;
+    margin-left: 275rpx;
+    /*margin-top: 250rpx;*/
+}
+.img{
+    width: 750rpx;
+    height: 500rpx;
+    flex: 1;
+}
+.btn-change{
+    margin-left: 600rpx;
+    margin-bottom: -75rpx;
+}
+.txt-title{
+    width: 100rpx;
+    margin-left: 325rpx;
+}
+.btn{
+    background: #00ff00;
+    width: 750rpx;
+    height: 35rpx;
+}
+.view-line-page{
+    height: 85rpx;
+}

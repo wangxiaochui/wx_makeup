@@ -1,0 +1,31 @@
+.scro-view{
+    width:100%;
+    height:800rpx
+}
+.imgListview{
+    width:100%;
+    
+    display: flex;
+    padding-left: 10rpx;
+    flex-direction: row;
+    flex-wrap:wrap;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+.itemList{
+    width: 240rpx;
+    height: 210rpx;
+    max-width: 240rpx;
+    margin: 2rpx;
+    border: 1rpx;
+}
+.itemImg{
+    width:100%;
+    height: 100%;  
+}
+.bottom{
+    background:red;
+    color:#ffffff;
+    
+    margin-bottom:0rpx
+}

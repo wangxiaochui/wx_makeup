@@ -1,0 +1,12 @@
+<scroll-view class="page-view">
+
+    <view class="page-item" wx:if="{{covImg !== ''}}"
+            bindtap="toEdit">
+        <image class="item-img" src="{{covImg}}" 
+            wx:if="{{covImg !== ''}}"></image>
+        <text class="item-text"
+        wx:if="{{covImg !== ''}}">我的作品\n点击编辑</text>
+
+    </view>
+
+</scroll-view>
